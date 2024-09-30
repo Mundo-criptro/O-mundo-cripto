@@ -4,26 +4,27 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Login</title>
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <h2>Entre na sua conta</h2>
-    <fieldset>
-        <div>
-            <form >
-                <input type="email" nome = "email" id = "email" placeholder="Insira seu Email:" required>
-            </form>
+    <div class="container">
+        <h2>Entre na sua conta</h2>
+        <form>
+            <div>
+                <input type="email" name="email" id="email" placeholder="Insira seu Email:" required>
+            </div>
+            <div>
+                <input type="password" name="senha" id="senha" placeholder="Senha" required>
+            </div>
+            <div class="button-row">
+                <button type="submit">Confirmar</button>
+            </div>
+        </form>
+        <p>Conecte-se pelo :</p>
+        <div class="button-row">
+            <button>Google</button>
+            <button>GitHub</button>
         </div>
-        
-        <div>
-            <form>
-                <input type="text" nome = "senha" id = "senha" placeholder="Senha" required>
-            </form>
-        </div>
-        <button><a href="../Tela principal.html">Confirmar</a></button>
-    </fieldset>
-    <p>Conecte-se pelo :</p>
-    <button>Google</button>
-    <br>
-    <button>GitHub</button>
+    </div>
 </body>
 </html>
