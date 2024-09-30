@@ -1,0 +1,82 @@
+/* Estilos para o corpo */
+body {
+    margin: 0;
+    padding: 20px;
+    font-family: Arial, sans-serif;
+    background-color: #000000; /* Fundo escuro */
+    color: #ffcc00; /* Cor de texto amarela */
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Estilos para o contêiner do formulário */
+.container {
+    background-color: #1e1e1e; /* Fundo escuro para o contêiner */
+    padding: 36px;
+    border-radius: 8px; /* Bordas arredondadas */
+    box-shadow: 0 0 10px rgba(255, 204, 0, 0.5); /* Sombra amarela */
+    text-align: center;
+    width: 100%;
+    max-width: 400px; /* Definindo largura máxima */
+}
+
+/* Estilo para o título */
+.container h2 {
+    margin-bottom: 20px;
+    color: #ffcc00; /* Título em amarelo */
+}
+
+/* Estilos dos campos de input */
+.container input {
+    width: 100%; /* Largura total */
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #ffcc00; /* Borda amarela */
+    border-radius: 4px; /* Bordas arredondadas */
+    background-color: #2a2a2a; /* Fundo escuro */
+    color: #ffcc00; /* Texto amarelo */
+}
+
+/* Estilo para o botão */
+.container button {
+    width: 100%; /* O botão ocupa toda a largura */
+    padding: 14px;
+    background: linear-gradient(135deg, #ffcc00, #ffaa00); /* Gradiente amarelo */
+    border: none;
+    border-radius: 8px;
+    color: #000000; /* Texto preto */
+    font-size: 16px;
+    cursor: pointer;
+    transition: background 0.3s, transform 0.2s, box-shadow 0.3s; /* Efeitos de transição */
+    box-shadow: 0 4px 10px rgba(255, 204, 0, 0.5); /* Sombra amarela */
+}
+
+.container button:hover {
+    background: linear-gradient(135deg, #ffaa00, #ffcc00); /* Mudança de cor ao passar o mouse */
+    transform: translateY(-2px); /* Leve elevação */
+    box-shadow: 0 6px 15px rgba(255, 204, 0, 0.7); /* Sombra aumentada */
+}
+
+.container button:active {
+    transform: translateY(1px); /* Efeito de pressionado */
+    box-shadow: 0 2px 5px rgba(255, 204, 0, 0.5); /* Sombra reduzida */
+}
+
+/* Estilo para os links dentro dos botões */
+.container button a {
+    color: inherit; /* Herdar a cor do botão */
+    text-decoration: none; /* Sem sublinhado */
+}
+
+/* Ajuste para o formulário */
+fieldset {
+    border: none; /* Remover borda do fieldset */
+    padding: 0; /* Remover padding */
+}
+
+/* Estilo das divs que envolvem os inputs */
+div {
+    margin-bottom: 15px; /* Espaço entre os inputs */
+}

@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cadastro</title>
+    <link rel="stylesheet" href="cadastro.css">
+</head>
+<body>
+    <div class="container">
+        <h2>Cadastre-se</h2>
+        <form action="processa_cadastro.php" method="POST">
+            <fieldset>
+                <div>
+                    <input type="text" name="nome" id="nome" placeholder="Nome" required>
+                </div>
+                <div>
+                    <input type="text" name="sobrenome" id="sobrenome" placeholder="Sobrenome" required>
+                </div>
+                <div>
+                    <input type="text" name="cpf" id="cpf" placeholder="CPF">
+                </div>
+                <div>
+                    <input type="text" name="cep" id="cep" placeholder="CEP">
+                </div>
+                <div>
+                    <input type="email" name="email" id="email" placeholder="E-mail">
+                </div>
+                <div>
+                    <input type="password" name="senha" id="senha" placeholder="Senha">
+                </div>
+                <div>
+                    <input type="password" name="csenha" id="csenha" placeholder="Confirme a Senha">
+                </div>
+                <div>
+                    <button type="submit">Cadastrar-se</button>
+                </div>
+            </fieldset>
+        </form>
+        <div>
+           <button onclick="window.location.href='login.html';">Login</button>
+        </div>
+    </div>
+</body>
+</html>

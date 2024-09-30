@@ -1,0 +1,91 @@
+body {
+    margin: 0;
+    padding: 20px;
+    font-family: Arial, sans-serif;
+    background-color: #000000; 
+    color: #ffcc00; 
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.container {
+    background-color: #1e1e1e; 
+    padding: 36px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(255, 204, 0, 0.5); 
+    text-align: center;
+}
+
+.container h2 {
+    margin-bottom: 20px;
+    color: #ffcc00;
+}
+
+.container label {
+    display: block;
+    margin-bottom: 8px;
+    color: #ffcc00; }
+
+.container input {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #ffcc00; 
+    border-radius: 4px;
+    background-color: #2a2a2a; 
+    color: #ffcc00; 
+}
+
+.button-row {
+    display: flex;
+    justify-content: space-between; 
+    margin-top: 15px; 
+}
+
+.container button {
+    flex: 1; 
+    margin: 0 5px; 
+    padding: 14px;
+    background: linear-gradient(135deg, #ffcc00, #ffaa00); 
+    border: none;
+    border-radius: 8px;
+    color: #000000; 
+    font-size: 16px;
+    cursor: pointer;
+    transition: background 0.3s, transform 0.2s, box-shadow 0.3s; 
+    box-shadow: 0 4px 10px rgba(255, 204, 0, 0.5); 
+}
+
+.container button:hover {
+    background: linear-gradient(135deg, #ffaa00, #ffcc00); 
+    transform: translateY(-2px); 
+    box-shadow: 0 6px 15px rgba(255, 204, 0, 0.7); 
+}
+
+.container button:active {
+    transform: translateY(1px); 
+    box-shadow: 0 2px 5px rgba(255, 204, 0, 0.5); 
+}
+
+.tabs {
+    display: flex;
+    justify-content: space-around;
+    margin-bottom: 20px;
+}
+
+.tab-button {
+    cursor: pointer;
+    padding: 10px;
+    border: none;
+    background-color: #444; 
+    border-radius: 4px;
+    margin: 0 5px;
+    color: #ffcc00; 
+}
+
+.tab-button.active {
+    background-color: #ffcc00; 
+    color: black; 
+}
