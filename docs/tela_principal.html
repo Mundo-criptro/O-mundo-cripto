@@ -11,11 +11,43 @@
     <button id="menu-btn">Menu</button>
     <button id="profile-btn">Perfil</button>
     <h1>Bem-vindo aos seus investimentos</h1>
+    
     <fieldset>
         <p>Conta:</p>
-        <br>
+        <input type="text" id="conta" placeholder="Digite sua conta">
+        <br><br>
+        
         <p>Mineração:</p>
+        <input type="text" id="mineracao" placeholder="Digite sua mineração">
+        <br><br>
+        
+        <p>Carteira:</p>
+        <div>
+            <label for="bitcoin-quantity">Quantidade de Bitcoin:</label>
+            <input type="number" id="bitcoin-quantity" value="0" step="0.01">
+            <p id="bitcoin-total">Valor total Bitcoin: $0.00</p>
+        </div>
+        <div>
+            <label for="litecoin-quantity">Quantidade de Litecoin:</label>
+            <input type="number" id="litecoin-quantity" value="0" step="0.01">
+            <p id="litecoin-total">Valor total Litecoin: $0.00</p>
+        </div>
+        <div>
+            <label for="ethereum-quantity">Quantidade de Ethereum:</label>
+            <input type="number" id="ethereum-quantity" value="0" step="0.01">
+            <p id="ethereum-total">Valor total Ethereum: $0.00</p>
+        </div>
+        <div>
+            <label for="dogecoin-quantity">Quantidade de Dogecoin:</label>
+            <input type="number" id="dogecoin-quantity" value="0" step="0.01">
+            <p id="dogecoin-total">Valor total Dogecoin: $0.00</p>
+        </div>
+        
+        <h3>Total Investido: <span id="total-invested">$0.00</span></h3>
+        <h3>Total em Reais: <span id="total-invested-brl">R$0.00</span></h3>
+        <h3>Total em Euros: <span id="total-invested-eur">€0.00</span></h3>
     </fieldset>
+
     <h3>Moedas ativas:</h3>
     <div class="container">
         <div class="coin-price">
@@ -55,8 +87,11 @@
             </div>
         </div>
     </div>
-    <button><a href="">Graficos</a></button>
+    
+    <button><a href="graficos.html">Gráficos</a></button>
 
-    <script src="tela_principal.js"></script>
+    <script src="js/tela-principal.js"></script>
+
+
 </body>
 </html>
