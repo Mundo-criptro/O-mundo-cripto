@@ -26,5 +26,47 @@
             <button>GitHub</button>
         </div>
     </div>
+      <script>
+        // Referência ao formulário
+        const loginForm = document.getElementById('loginForm');
+
+        loginForm.addEventListener('submit', async (e) => {
+            e.preventDefault();
+
+            const email = document.getElementById('email').value.trim();
+            const senha = document.getElementById('senha').value.trim();
+
+            try {
+                // Tentativa de login pela API
+                const response = await fetch('http://127.0.0.1:5000/login', {
+                    method: 'POST',
+                    headers: { 'Content-Type': 'application/json' },
+                    body: JSON.stringify({ email, senha }),
+                });
+
+                const result = await response.json();
+
+                if (response.ok) {
+                    alert(result.message);
+                    // Redirecionamento em caso de sucesso
+                    window.location.href = "manage.html";
+                } else {
+                    throw new Error(result.error || 'Erro desconhecido na autenticação.');
+                }
+            } catch (error) {
+                // Fallback: verificar localStorage
+                const storedPassword = localStorage.getItem(email);
+
+                if (storedPassword && storedPassword === senha) {
+                    alert('Login bem-sucedido pelo sistema local!');
+                    window.location.href = "manage.html";
+                } else {
+                    // Exibição de mensagem de erro
+                    document.getElementById('error-message').textContent =
+                        error.message || 'Usuário ou senha inválidos.';
+                }
+            }
+        });
+    </script>
 </body>
 </html>
