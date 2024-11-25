@@ -84,7 +84,7 @@
 
                 // Adicionando os dados de preços históricos para os últimos 30 dias
                 for (let i = 0; i < bitcoinData.length; i++) {
-                    chartData.addRow([
+                    chartData.addRow([ 
                         new Date(bitcoinData[i][0]).toLocaleDateString(),
                         bitcoinData[i][1],
                         litecoinData[i][1],
@@ -130,11 +130,11 @@
         // Função para buscar dados da API CoinGecko
         async function fetchData(coin) {
             try {
-                const response = await fetch(https://api.coingecko.com/api/v3/coins/${coin}/market_chart?vs_currency=usd&days=30);
+                const response = await fetch(`https://api.coingecko.com/api/v3/coins/${coin}/market_chart?vs_currency=usd&days=30`);
                 const data = await response.json();
                 return data.prices; // Retorna os preços para cada dia
             } catch (error) {
-                console.error(Erro ao buscar dados da moeda ${coin}:, error);
+                console.error(`Erro ao buscar dados da moeda ${coin}:`, error);
                 return null; // Retorna null se não conseguir obter os dados
             }
         }
